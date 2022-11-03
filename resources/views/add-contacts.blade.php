@@ -38,10 +38,11 @@
                 
             {{-- Create Contact Button Here --}}
             <div class="create-contact">
-                <a href="#">Create Contact</a>
+                    <a href="#" class="show-create" >Add New Contact</a>
             </div>
             </div>
-            <script src=""></script>
+            <script src="{{asset('js/show-add-contact.js')}}">
+            </script>
         </section>
     </main>
 </body>

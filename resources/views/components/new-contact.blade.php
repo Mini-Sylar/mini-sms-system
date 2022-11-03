@@ -13,5 +13,6 @@
         <button type="submit" class="add-contact-button">Add Contact</button>
     </form>
     </div>
-   <script src="{{asset('js/show-add-contact.js')}}"></script>
+   
 </aside>
+ {{-- <script src="{{asset('js/show-add-contact.js')}}"></script> --}}
