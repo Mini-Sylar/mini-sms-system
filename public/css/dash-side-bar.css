@@ -1,6 +1,8 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+
 .dash-side-container {
     height: 100vh;
-    width: 4vw;
+    width: 6vw;
     background-color: var(--main-accent-color);
     display: flex;
     flex-direction: column;
@@ -10,4 +12,29 @@
     top: 0;
     left: 0;
     z-index: 1;
+}
+
+.dash-side {
+    display: flex;
+    flex-direction: column;
+    /* background-color: springgreen; */
+    height: 50vh;
+    margin: auto 0;
+    width: 100%;
+    text-align: center;
+    row-gap: 4rem;
+    padding-block: 2rem;
+}
+
+.dash-side a {
+    text-decoration: none;
+}
+
+.logout {
+    /* height: 10vh; */
+    /* background-color: red; */
+    padding-block: 3rem;
+}
+.logout a {
+    text-decoration: none;
 }
