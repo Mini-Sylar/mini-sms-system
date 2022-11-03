@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Sign_up;
 use App\Http\Controllers\UserAuth;
+use App\Http\Controllers\AddContact;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,3 +56,6 @@ Route::get('/logout', function () {
     }
     return redirect('login');
 });
+
+
+Route::post("contacts", [AddContact::class, 'addData']);
