@@ -32,11 +32,11 @@
                             <p>0</p>
                         </div>
                         <div class="analytics-item">
-                            <h3>Messages Delivered</h3>
+                            <h3>Number of Contacts</h3>
                             <p>0</p>
                         </div>
                         <div class="analytics-item">
-                            <h3>Messages Failed</h3>
+                            <h3>Number of Groups</h3>
                             <p>0</p>
                         </div>
                     </div></div>
