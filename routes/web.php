@@ -32,6 +32,12 @@ Route::get('/dashboard', function () {
 })->middleware('tokenValid');
 // Route::view("dashboard", "dashboard");
 
+// Add contacts page
+Route::get('/contacts', function () {
+    //
+    return view('add-contacts');
+})->middleware('tokenValid');
+
 // login
 Route::get('/login', function () {
     if (session()->has('user')) {
@@ -39,6 +45,7 @@ Route::get('/login', function () {
     }
     return view('login');
 });
+
 
 
 // Logout

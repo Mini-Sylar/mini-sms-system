@@ -17,9 +17,10 @@
                 <h2>Quick Actions</h2>
                 <div class="quick-actions">
                     <a href="#">Quick Message</a>
-                    <a href="#">Contacts</a>
+                    <a href="/contacts">Contacts</a>
                     <a href="#">Groups</a>
                 </div>
+            </div>
                 {{-- Analytics --}}
                  <h2 class="ana-text">Analytics</h2>
                 <div class="analytics">

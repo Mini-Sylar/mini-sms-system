@@ -6,9 +6,12 @@
 
 <aside class="dash-side-container">
     <nav class="dash-side" >
+      {{-- Go Home --}}
+       <a href="/dashboard"><i class="fa-solid fa-messages"></i>Home</a>
+       {{-- Quick Message --}}
        <a href="#"><i class="fa-solid fa-messages"></i>Quick Message</a>
        {{-- Contact Section --}}
-        <a href="#"><i class="fa-solid fa-messages"></i> Contacts</a>
+        <a href="/contacts"><i class="fa-solid fa-messages"></i> Contacts</a>
         {{-- Group Section --}}
          <a href="#"><i class="fa-solid fa-messages"></i>Groups</a>
     </nav>
