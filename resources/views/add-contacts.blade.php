@@ -14,6 +14,7 @@
     <main>
         <section>
             {{-- Create table with heading name, number and actions --}}
+            <x-new-contact/>
             <div class="main-container">
                 {{-- Heading --}}
                 <h2>Contact List</h2>
@@ -39,7 +40,8 @@
             <div class="create-contact">
                 <a href="#">Create Contact</a>
             </div>
-          
+            </div>
+            <script src=""></script>
         </section>
     </main>
 </body>
