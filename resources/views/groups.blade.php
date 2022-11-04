@@ -25,7 +25,7 @@
                         @foreach ($groups as $group)
                         <tr>
                             <td>{{$group['group_name']}}</td>
-                            <td>{{$group['number_of_contacts']}}</td>
+                            <td>  {{substr_count($group['contact_number'], ",")+1}}</td>
                             <td class="actions">
                                 <a href="edit/{{$group['id']}}" class="show-update">Update</a>
                                 <a href="delete/{{$group['id']}}">Delete</a>

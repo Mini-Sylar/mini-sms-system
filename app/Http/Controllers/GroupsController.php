@@ -22,6 +22,13 @@ class GroupsController extends Controller
     function showData()
     {
         $data =  sms_group::where('created_by', session('user'))->get();
-        return view('groups', ['groups' => $data]);
+        // get contact_number from sms_group table
+        $contact =  sms_group::where('created_by', session('user'))->get('contact_number');
+        // get count of contacts in each group into explode
+        // dd($contact[0]->contact_number);
+        $count = explode(',', $contact[0]->contact_number);
+        // dd(count($count));
+
+        return view('groups', ['groups' => $data, 'wordCount' => $count]);
     }
 }
