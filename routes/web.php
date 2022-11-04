@@ -34,10 +34,13 @@ Route::get('/dashboard', function () {
 // Route::view("dashboard", "dashboard");
 
 // Add contacts page
-Route::get('/contacts', function () {
-    //
-    return view('add-contacts');
-})->middleware('tokenValid');
+Route::view("contacts", "add-contacts")->middleware('tokenValid');
+Route::post("contacts", [AddContact::class, 'addData']);
+// Route::get('/contacts', function () {
+//     //
+//     return view('add-contacts');
+// })->middleware('tokenValid');
+// Route::post("/contacts", [Sign_up::class, 'addData']);
 
 // login
 Route::get('/login', function () {
@@ -56,6 +59,3 @@ Route::get('/logout', function () {
     }
     return redirect('login');
 });
-
-
-Route::post("contacts", [AddContact::class, 'addData']);
