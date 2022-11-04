@@ -25,8 +25,8 @@ Route::post("sign-up", [Sign_up::class, 'addData']);
 
 // Login
 Route::post("user", [UserAuth::class, 'userLogin']);
-// Route::view("login", "login");
-// Dashboard
+
+
 Route::get('/dashboard', function () {
     //
     return view('dashboard');
@@ -46,15 +46,6 @@ Route::get('edit/{id}', [AddContact::class, 'edit']);
 Route::post("update/{id}", [AddContact::class, 'update']);
 // Route::view("update-contact", "update-contact")->middleware('tokenValid');
 Route::get("delete/{id}", [AddContact::class, 'delete']);
-// Reflect changes
-
-
-
-
-
-
-// Update contact
-// Route::get("contacts/{id}", [AddContact::class, 'showSpecificData']);
 
 // login
 Route::get('/login', function () {
@@ -64,8 +55,6 @@ Route::get('/login', function () {
     return view('login');
 });
 
-
-
 // Logout
 Route::get('/logout', function () {
     if (session()->has('user')) {
@@ -73,3 +62,7 @@ Route::get('/logout', function () {
     }
     return redirect('login');
 });
+
+
+// Create group route
+Route::view("groups", "groups")->middleware('tokenValid');

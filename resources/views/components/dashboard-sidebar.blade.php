@@ -13,7 +13,7 @@
        {{-- Contact Section --}}
         <a href="/contacts"><i class="fa-solid fa-messages"></i> Contacts</a>
         {{-- Group Section --}}
-         <a href="#"><i class="fa-solid fa-messages"></i>Groups</a>
+         <a href="/groups"><i class="fa-solid fa-messages"></i>Groups</a>
     </nav>
     <div class="logout">
           <a href="logout">Logout</a>
