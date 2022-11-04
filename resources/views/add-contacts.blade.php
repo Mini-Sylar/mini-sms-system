@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="{{asset('css/contacts.css')}}" rel="stylesheet">
-    <title>Document</title>
+    <title>Contacts | {{session('user')}}</title>
 </head>
 <body>
     <x-dashboard-header/>
@@ -32,7 +32,7 @@
                     <td>{{$contact['contact_number']}}</td>
                     <td class="actions">
                         <a href="">Update</a>
-                        <a href="">Delete</a>
+                        <a href="delete/{{$contact['id']}}">Delete</a>
                     </td>
                     
                     

@@ -11,13 +11,14 @@ body {
     margin: 0 auto;
     margin-top: 10vh;
     padding-left: 5rem;
+    gap: 3rem;
     background-color: rgb(247, 244, 244);
     /* overflow-y: scroll; */
 }
 
 .table-container {
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     overflow-y: scroll;
     padding: 1rem;
 }
@@ -25,7 +26,7 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-top: 2rem;
 }
 table tr {
@@ -33,13 +34,22 @@ table tr {
 }
 th {
     border: 1px solid black;
-    padding: 1rem;
+    padding-block: 1rem;
     text-align: center;
 }
 td {
+    width: 100%;
     border: 1px solid black;
-    padding: 1rem;
+    padding: 0.8rem;
     text-align: center;
+}
+
+td:nth-child(1) {
+    width: 40%;
+}
+
+td:nth-child(2) {
+    width: 40%;
 }
 
 .actions a {

@@ -22,7 +22,7 @@ class AddContact extends Controller
         // $req->session()->flash('status', 'Contact added successfully!');
         // flash user with message
         // $req->session()->flash('status', 'Contact added successfully!');
-        return back()->with('success', 'Item created successfully!');
+        return back()->with('success', 'Contact created successfully!');
     }
 
     function showData()
@@ -30,5 +30,12 @@ class AddContact extends Controller
         // Show all where created by is user id
         $data =  sms_user_contact::where('created_by', session('user'))->get();
         return view('add-contacts', ['members' => $data]);
+    }
+
+    function delete($id)
+    {
+        $data = sms_user_contact::find($id);
+        $data->delete();
+        return back()->with('success', 'Contact deleted successfully!');
     }
 }
