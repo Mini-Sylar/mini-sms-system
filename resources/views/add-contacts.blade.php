@@ -25,14 +25,19 @@
                     <th>Phone Number</th>
                     <th>Actions</th>
                 </tr>
+                 @foreach ($members as $contact)
                 <tr>
-                    <td>John Doe</td>
-                    <td>02xxxxxxxxx</td>
+                   
+                    <td>{{$contact['full_name']}}</td>
+                    <td>{{$contact['contact_number']}}</td>
                     <td class="actions">
                         <a href="">Update</a>
                         <a href="">Delete</a>
                     </td>
+                    
+                    
                 </tr>
+                @endforeach
             </table>
                 </div>
                 

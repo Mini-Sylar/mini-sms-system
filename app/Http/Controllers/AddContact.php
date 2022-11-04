@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\sms_user_contact;
 use App\Models\SMS_user;
-use Symfony\Component\HttpFoundation\Session\Flash\FlashBag;
+
 
 class AddContact extends Controller
 {
@@ -23,5 +23,12 @@ class AddContact extends Controller
         // flash user with message
         // $req->session()->flash('status', 'Contact added successfully!');
         return back()->with('success', 'Item created successfully!');
+    }
+
+    function showData()
+    {
+        // Show all where created by is user id
+        $data =  sms_user_contact::where('created_by', session('user'))->get();
+        return view('add-contacts', ['members' => $data]);
     }
 }
