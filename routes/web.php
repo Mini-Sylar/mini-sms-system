@@ -35,9 +35,26 @@ Route::get('/dashboard', function () {
 
 // Add contacts page
 Route::view("contacts", "add-contacts")->middleware('tokenValid');
+
 Route::post("contacts", [AddContact::class, 'addData']);
 Route::get("contacts", [AddContact::class, 'showData']);
+
+
+Route::view('edit/{id}', 'update-contact')->middleware('tokenValid');
+// Get specific contact
+Route::get('edit/{id}', [AddContact::class, 'edit']);
+Route::post("update/{id}", [AddContact::class, 'update']);
+// Route::view("update-contact", "update-contact")->middleware('tokenValid');
 Route::get("delete/{id}", [AddContact::class, 'delete']);
+// Reflect changes
+
+
+
+
+
+
+// Update contact
+// Route::get("contacts/{id}", [AddContact::class, 'showSpecificData']);
 
 // login
 Route::get('/login', function () {

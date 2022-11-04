@@ -1,4 +1,19 @@
-.new-contact-aside {
+:root {
+    --main-accent-color: #ff8e00;
+    --main-text-color: black;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: var(--main-text-color);
+}
+
+.new-contact-aside,
+.update-contact-aside {
     position: absolute;
     box-shadow: 100vmin 0 0 100vw rgba(0, 0, 0, 0.804);
     z-index: 4;
@@ -9,6 +24,10 @@
     right: 23%;
     padding: 3rem;
     visibility: hidden;
+}
+
+.update-contact-aside {
+    visibility: visible;
 }
 
 form {
@@ -48,7 +67,8 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: black;
 }
-.add-new-contact {
+.add-new-contact,
+.update-contact {
     padding: 3rem;
     display: block;
     /* background-color: darkblue; */
@@ -89,4 +109,8 @@ input[type="submit"]:hover {
 
 .show-contact {
     visibility: visible;
+}
+
+button {
+    background-color: #ff8e00;
 }

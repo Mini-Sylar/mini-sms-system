@@ -16,6 +16,8 @@
         <section>
             {{-- Create table with heading name, number and actions --}}
             <x-new-contact/>
+            {{-- <x-update-contact/> --}}
+
             <div class="main-container">
                 {{-- Heading --}}
                 <h2>Contact List</h2>
@@ -32,15 +34,12 @@
                 </tr>
                  @foreach ($members as $contact)
                 <tr>
-                   
                     <td>{{$contact['full_name']}}</td>
                     <td>{{$contact['contact_number']}}</td>
                     <td class="actions">
-                        <a href="">Update</a>
+                        <a href="edit/{{$contact['id']}}" class="show-update">Update</a>
                         <a href="delete/{{$contact['id']}}">Delete</a>
                     </td>
-                    
-                    
                 </tr>
                 @endforeach
             </table>
@@ -51,13 +50,10 @@
                     <a href="#" class="show-create" >Add New Contact</a>
             </div>
             </div>
-            <script src="{{asset('js/show-add-contact.js')}}">
-            const deleted_successfully = document.querySelector('.flash-deleted');
-        // hide flash message after 4 seconds
-        setTimeout(() => {
-            deleted_successfully.style.visibility = 'hidden'
-        }, 4000)
-            </script>
+       
+             {{-- <script src="{{asset('js/show-update-contact.js')}}">
+                
+            </script> --}}
         </section>
     </main>
 </body>

@@ -15,13 +15,8 @@ class AddContact extends Controller
         $contact = new sms_user_contact;
         $contact->full_name = $req->input('name');
         $contact->contact_number = $req->input('phone');
-        // get id from session
         $contact->created_by = session('user');
         $contact->save();
-        // prevent resubmission
-        // $req->session()->flash('status', 'Contact added successfully!');
-        // flash user with message
-        // $req->session()->flash('status', 'Contact added successfully!');
         return back()->with('success', 'Contact created successfully!');
     }
 
@@ -39,11 +34,20 @@ class AddContact extends Controller
         return back()->with('success', 'Contact deleted successfully!');
     }
 
-    function update($id, Request $req){
+    function edit($id)
+    {
+        $data = sms_user_contact::find($id);
+        return view('update-contact', ['member' => $data]);
+        // return view('update{id}', ['specific_member' => $data]);
+    }
+
+    function update($id, Request $req)
+    {
+        $data =  sms_user_contact::where('created_by', session('user'))->get();
         $contact = sms_user_contact::find($id);
         $contact->full_name = $req->input('name');
         $contact->contact_number = $req->input('phone');
         $contact->save();
-        return back()->with('success', 'Contact updated successfully!');
+        return redirect('contacts')->with('success', 'Contact updated successfully!');
     }
 }
