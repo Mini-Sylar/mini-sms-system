@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('sms_group', function (Blueprint $table) {
             $table->id();
             $table->string('group_name');
-            $table->string('contact_number');
+            $table->longText('contact_number')->nullable();
             $table->string('created_by');
             $table->timestamps();
         });

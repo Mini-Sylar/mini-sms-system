@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Sign_up;
 use App\Http\Controllers\UserAuth;
 use App\Http\Controllers\AddContact;
+use App\Http\Controllers\GroupsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -66,3 +68,5 @@ Route::get('/logout', function () {
 
 // Create group route
 Route::view("groups", "groups")->middleware('tokenValid');
+Route::post("groups", [GroupsController::class, 'addGroup']);
+Route::get("groups", [GroupsController::class, 'showData']);

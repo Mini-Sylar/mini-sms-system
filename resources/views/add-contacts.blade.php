@@ -51,9 +51,9 @@
             </div>
             </div>
        
-             {{-- <script src="{{asset('js/show-update-contact.js')}}">
+             <script src="{{asset('js/show-add-contact.js')}}">
                 
-            </script> --}}
+            </script>
         </section>
     </main>
 </body>

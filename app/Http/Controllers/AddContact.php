@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\sms_user_contact;
-use App\Models\SMS_user;
 
 
 class AddContact extends Controller

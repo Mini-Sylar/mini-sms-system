@@ -12,6 +12,7 @@
     <x-dashboard-sidebar/>
     <main>
         <section>
+            <x-new-group/>
             <div class="main-container">
                 <h2>Groups</h2>
                 <div class="table-container">
@@ -21,7 +22,7 @@
                             <th>Number of Contacts</th>
                             <th>Actions</th>
                         </tr>
-                        {{-- @foreach ($groups as $group)
+                        @foreach ($groups as $group)
                         <tr>
                             <td>{{$group['group_name']}}</td>
                             <td>{{$group['number_of_contacts']}}</td>
@@ -30,7 +31,7 @@
                                 <a href="delete/{{$group['id']}}">Delete</a>
                             </td>
                         </tr>
-                        @endforeach --}}
+                        @endforeach
                     </table>
                 </div>
                 <div class="create-group">
@@ -39,5 +40,8 @@
             </div>
         </section>
     </main>
+    <script src="{{asset('js/show-add-contact.js')}}">
+                
+            </script>
 </body>
 </html>
