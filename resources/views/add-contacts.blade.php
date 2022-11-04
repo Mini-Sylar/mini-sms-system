@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="{{asset('css/contacts.css')}}" rel="stylesheet">
+       
     <title>Contacts | {{session('user')}}</title>
 </head>
 <body>
@@ -18,6 +19,10 @@
             <div class="main-container">
                 {{-- Heading --}}
                 <h2>Contact List</h2>
+                 <div id="app2" class="flash-deleted"> 
+                     @include('flash-message')
+                     @yield('content')
+                 </div>
                 <div class="table-container">
                       <table class="table">
                 <tr>
@@ -47,6 +52,11 @@
             </div>
             </div>
             <script src="{{asset('js/show-add-contact.js')}}">
+            const deleted_successfully = document.querySelector('.flash-deleted');
+        // hide flash message after 4 seconds
+        setTimeout(() => {
+            deleted_successfully.style.visibility = 'hidden'
+        }, 4000)
             </script>
         </section>
     </main>

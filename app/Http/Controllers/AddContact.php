@@ -38,4 +38,12 @@ class AddContact extends Controller
         $data->delete();
         return back()->with('success', 'Contact deleted successfully!');
     }
+
+    function update($id, Request $req){
+        $contact = sms_user_contact::find($id);
+        $contact->full_name = $req->input('name');
+        $contact->contact_number = $req->input('phone');
+        $contact->save();
+        return back()->with('success', 'Contact updated successfully!');
+    }
 }

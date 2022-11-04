@@ -1,6 +1,6 @@
   <link href="{{asset('css/new-contact.css')}}" rel="stylesheet">
 
-<aside class="new-contact-aside">
+<aside class="update-contact-aside">
     <h2>New Contact</h2>
      <div id="app" class="flash-message"> 
         @include('flash-message')
@@ -13,10 +13,10 @@
         <form method="POST" action="/contacts">
         @csrf
         <label for="name">Name</label>
-        <input type="text" name="name" id="name" value="" required>
+        <input type="text" name="name" id="name" value="old Value" required>
         <label for="phone">Phone</label>
-        <input type="text" name="phone" id="phone" value="" required>
-        <button type="submit" class="add-contact-button">Add Contact</button>
+        <input type="text" name="phone" id="phone" value="old value" required>
+        <button type="submit" class="add-contact-button">Update Contact</button>
     </form>
     </div>
     <script>
