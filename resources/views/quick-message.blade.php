@@ -14,6 +14,7 @@
 
 <body>
     <x-add-from-group />
+    <x-add-from-contacts />
     <x-dashboard-header />
     <x-dashboard-sidebar />
     <main>
@@ -21,13 +22,14 @@
             <div class="quick-message-container">
                 <h2>Send A Message</h2>
                 <div class="quick-actions">
-                    <a href="quick-message">Add Exisiting Contact</a>
-                    <a href="quick-message">Add Contacts From Group</a>
+                    <a href="#" class="add-from-contact">Add Exisiting Contact</a>
+                    <a href="#" class="add-from-group">Add Contacts From Group</a>
                 </div>
                 {{-- Input message Section --}}
                 {{-- Add components here --}}
 
                 <form action="#">
+                    @csrf
                     <div class="message-body">
                         {{-- Create a textarea --}}
 
@@ -51,6 +53,42 @@
                 </form>
         </section>
     </main>
+    <script>
+        const addFromGroup = document.querySelector('.add-from-group');
+        const addFromGroupAside = document.querySelector('.add-from-group-aside');
+        const closeView = document.querySelector('.close-view');
+        const confirmChoice = document.querySelector('.confirm-choice');
+
+        addFromGroup.addEventListener('click', () => {
+            addFromGroupAside.classList.add('active');
+        });
+
+        closeView.addEventListener('click', () => {
+            addFromGroupAside.classList.remove('active');
+        });
+
+        confirmChoice.addEventListener('click', () => {
+            addFromGroupAside.classList.remove('active');
+        });
+
+        // For contact
+        const addFromContact = document.querySelector('.add-from-contact');
+        const addFromContactAside = document.querySelector('.add-from-contact-aside');
+        const closeViewContact = document.querySelector('.close-view-contact');
+        const confirmChoiceContact = document.querySelector('.confirm-choice-contact');
+
+        addFromContact.addEventListener('click', () => {
+            addFromContactAside.classList.add('active');
+        });
+
+        closeViewContact.addEventListener('click', () => {
+            addFromContactAside.classList.remove('active');
+        });
+
+        confirmChoiceContact.addEventListener('click', () => {
+            addFromContactAside.classList.remove('active');
+        });
+    </script>
 </body>
 
 </html>

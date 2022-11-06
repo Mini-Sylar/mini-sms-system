@@ -90,7 +90,7 @@ textarea {
     border-radius: 25px;
     border: 1px solid transparent;
     padding-inline: 3rem;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
     font-size: large;
 }
 
@@ -123,6 +123,7 @@ textarea {
     margin: 0 auto;
     box-shadow: 100vmin 0 0 100vw rgba(0, 0, 0, 0.804);
     z-index: 5;
+    visibility: hidden;
 }
 
 .add-from-group-container {
@@ -190,4 +191,8 @@ td {
     background-color: var(--main-accent-color);
     padding: 1rem;
     font-size: larger;
+}
+
+.active {
+    visibility: visible;
 }

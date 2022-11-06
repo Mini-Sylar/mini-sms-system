@@ -1,38 +1,38 @@
-<aside class="add-from-group-aside">
+<aside class="add-from-group-aside add-from-contact-aside">
     <div class="add-from-group-container">
-        <h3>Select Groups</h3>
-        <a href="#" class="close-view">Close View</a>
+        <h3>Select Contacts</h3>
+        <a href="#" class="close-view close-view-contact">Close View</a>
         <div class="table-container">
             <table>
                 <tr>
-                    <th>Group Name</th>
-                    <th>Contacts</th>
+                    <th>Contact Name</th>
+                    <th>Phone Number</th>
                 </tr>
                 <tr>
                     <td>
                         <input type="checkbox" name="group-name-here">
-                        Group 1
+                        Name 1
                     </td>
                     <td>08012345678</td>
                 </tr>
                 <tr>
-                    <td> <input type="checkbox" name="group-name-here"> Group 1</td>
+                    <td> <input type="checkbox" name="group-name-here"> Name 2</td>
                     <td>08012345678</td>
                 </tr>
                 <tr>
-                    <td> <input type="checkbox" name="group-name-here"> Group 1</td>
+                    <td> <input type="checkbox" name="group-name-here"> Name 1</td>
                     <td>08012345678</td>
                 </tr>
                 <tr>
-                    <td> <input type="checkbox" name="group-name-here"> Group 1</td>
+                    <td> <input type="checkbox" name="group-name-here"> Name 1</td>
                     <td>08012345678</td>
                 </tr>
                 <tr>
-                    <td> <input type="checkbox" name="group-name-here"> Group 1</td>
+                    <td> <input type="checkbox" name="group-name-here"> Name 1</td>
                     <td>08012345678</td>
                 </tr>
                 <tr>
-                    <td> <input type="checkbox" name="group-name-here"> Group 1</td>
+                    <td> <input type="checkbox" name="group-name-here"> Name 1</td>
                     <td>08012345678</td>
                 </tr>
                 <tr>
