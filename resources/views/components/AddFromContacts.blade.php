@@ -10,10 +10,10 @@
                 </tr>
                 @foreach ($contacts as $contact)
                     <tr>
-                        <td> <input type="checkbox" name="contact-name-here" class="messageCheckboxContact" checked
-                                value="Contact-Name-Here"> {{ $contact['full_)name'] }}
+                        <td> <input type="checkbox" name="contact-name-here" class="messageCheckboxContact"
+                                value="{{ $contact['contact_number'] }}"> {{ $contact['full_name'] }}
                         </td>
-                        <td>08012345678</td>
+                        <td>{{ $contact['contact_number'] }}</td>
                     </tr>
                 @endforeach
             </table>
