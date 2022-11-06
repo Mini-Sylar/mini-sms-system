@@ -7,9 +7,12 @@
 
 
 @if ($message = Session::get('error'))
-    <div class="alert alert-danger alert-block">
-        {{-- <button type="button" class="close" data-dismiss="alert">×</button>	 --}}
-        <strong style="color:red">{{ $message }}</strong>
+    <div class="alert alert-danger alert-block"
+        style="display: flex; justify-content:center;align-items:center; gap:1rem; color:red">
+        <x-tabler-alert-circle style="color: #555" />
+        <strong style="color:red">
+            {{ $message }}
+        </strong>
     </div>
 @endif
 

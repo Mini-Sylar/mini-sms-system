@@ -17,7 +17,8 @@
             <div class="sign-up-container">
 
                 <div class="sign-up">
-                    <div id="app" class="flash-message" >
+                    <div id="app" class="flash-message"
+                        style="display: flex;justify-content:center;align-items:center;">
                         @include('flash-message')
 
 
