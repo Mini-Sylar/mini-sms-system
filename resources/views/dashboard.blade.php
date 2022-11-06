@@ -25,7 +25,6 @@
                 {{-- Analytics --}}
                  <h2 class="ana-text">Analytics</h2>
                 <div class="analytics">
-                    
                     <div class="left-side">Graph Here</div>
                     <div class="right-side"> 
                         <div class="analytics-container">

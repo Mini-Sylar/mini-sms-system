@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     width: min(90%, 1200px);
     margin: 0 auto;
     margin-top: 10vh;
@@ -53,8 +53,9 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
+    width: min(90%, 1200px);
     padding: 3rem;
+    margin: 0 auto;
     /* background-color: red; */
     /* margin-top: 5rem; */
     /* background-color: rgb(247, 244, 244); */
@@ -74,13 +75,17 @@ body {
 .ana-text {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-top: 4rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 100vw;
+    text-align: center;
+    padding-left: 2rem;
 }
 
 .left-side {
-    width: 100%;
+    width: 80%;
 }
 
 .right-side {
-    width: 100%;
+    width: 80%;
 }
