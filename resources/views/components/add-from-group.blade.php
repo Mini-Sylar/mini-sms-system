@@ -10,7 +10,8 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" name="group-name-here">
+                        <input type="checkbox" name="group-name-here" class="messageCheckboxGroup"
+                            value="Group Example Here">
                         Group 1
                     </td>
                     <td>08012345678</td>
