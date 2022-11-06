@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\sms_group;
-use App\Models\sms_user;
+use App\Models\sms_user_contact;
 
 class GroupsController extends Controller
 {
@@ -22,11 +22,8 @@ class GroupsController extends Controller
 
     function showData()
     {
-        $data =  sms_user::where('phone_number', session('user'))->get() ?? [];
-        // get contact_number from sms_group table
-        $contact =  sms_group::where('created_by', session('user'))->get('contact_number');
-        $count = explode(',', $contact[0]->contact_number);
-        return view('groups', ['groups' => $data, 'wordCount' => $count]);
+        $data =  sms_group::where('created_by', session('user'))->get();
+        return view('groups', ['groups' => $data]);
     }
     function delete($id)
     {
