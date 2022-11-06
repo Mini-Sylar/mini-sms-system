@@ -17,7 +17,7 @@
             <div class="sign-up-container">
 
                 <div class="sign-up">
-                    <div id="app" class="flash-message" style="color: red">
+                    <div id="app" class="flash-message" >
                         @include('flash-message')
 
 
