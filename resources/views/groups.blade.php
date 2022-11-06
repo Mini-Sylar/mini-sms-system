@@ -29,8 +29,8 @@
                                 <td>{{ $group['group_name'] }}</td>
                                 <td> {{ substr_count($group['contact_number'], ',') + 1 }}</td>
                                 <td class="actions">
-                                    <a href="edit/{{ $group['id'] }}" class="show-update">Update</a>
-                                    <a href="delete/{{ $group['id'] }}">Delete</a>
+                                    <a href="#" class="show-update">Update</a>
+                                    {{-- <a href="groups/delete/{{ $group['id'] }}">Delete</a> --}}
                                 </td>
                             </tr>
                         @endforeach

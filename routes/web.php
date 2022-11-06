@@ -39,13 +39,10 @@ Route::get('/dashboard', function () {
 Route::view("contacts", "add-contacts")->middleware('tokenValid');
 Route::post("contacts", [AddContact::class, 'addData']);
 Route::get("contacts", [AddContact::class, 'showData']);
-
-
 Route::view('edit/{id}', 'update-contact')->middleware('tokenValid');
 // Get specific contact
 Route::get('edit/{id}', [AddContact::class, 'edit']);
 Route::post("update/{id}", [AddContact::class, 'update']);
-// Route::view("update-contact", "update-contact")->middleware('tokenValid');
 Route::get("delete/{id}", [AddContact::class, 'delete']);
 
 // login
@@ -69,3 +66,4 @@ Route::get('/logout', function () {
 Route::view("groups", "groups")->middleware('tokenValid');
 Route::post("groups", [GroupsController::class, 'addGroup']);
 Route::get("groups", [GroupsController::class, 'showData']);
+// Route::get("groups/delete/{id}", [GroupsController::class, 'delete']);

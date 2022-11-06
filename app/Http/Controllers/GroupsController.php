@@ -28,7 +28,12 @@ class GroupsController extends Controller
         // dd($contact[0]->contact_number);
         $count = explode(',', $contact[0]->contact_number);
         // dd(count($count));
-
         return view('groups', ['groups' => $data, 'wordCount' => $count]);
+    }
+    function delete($id)
+    {
+        $data = sms_group::find($id);
+        $data->delete();
+        return back()->with('success', 'Group deleted successfully!');
     }
 }

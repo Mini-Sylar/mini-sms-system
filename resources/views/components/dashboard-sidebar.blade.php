@@ -6,16 +6,24 @@
     <nav class="dash-side">
         {{-- Go Home --}}
         <a href="/dashboard">
-            <x-tabler-home />Home
+            <x-tabler-home class="dash-icon" />
         </a>
         {{-- Quick Message --}}
-        <a href="#"><i class="fa-solid fa-messages"></i>Quick Message</a>
+        <a href="#">
+            <x-tabler-message-circle class="dash-icon" />
+        </a>
         {{-- Contact Section --}}
-        <a href="/contacts"><i class="fa-solid fa-messages"></i> Contacts</a>
+        <a href="/contacts">
+            <x-tabler-address-book  />
+        </a>
         {{-- Group Section --}}
-        <a href="/groups"><i class="fa-solid fa-messages"></i>Groups</a>
+        <a href="/groups">
+            <x-tabler-user-plus class="dash-icon" />
+        </a>
     </nav>
     <div class="logout">
-        <a href="logout">Logout</a>
+        <a href="logout">
+            <x-tabler-logout />
+        </a>
     </div>
 </aside>
