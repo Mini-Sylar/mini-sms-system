@@ -30,7 +30,7 @@
                                 <td> {{ substr_count($group['contact_number'], ',') + 1 }}</td>
                                 <td class="actions">
                                     <a href="#" class="show-update">Update</a>
-                                    {{-- <a href="groups/delete/{{ $group['id'] }}">Delete</a> --}}
+                                    <a href="groups/delete/{{ $group['id'] }}">Delete</a>
                                 </td>
                             </tr>
                         @endforeach

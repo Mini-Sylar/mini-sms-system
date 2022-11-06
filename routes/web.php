@@ -39,8 +39,9 @@ Route::get('/dashboard', function () {
 Route::view("contacts", "add-contacts")->middleware('tokenValid');
 Route::post("contacts", [AddContact::class, 'addData']);
 Route::get("contacts", [AddContact::class, 'showData']);
-Route::view('edit/{id}', 'update-contact')->middleware('tokenValid');
+
 // Get specific contact
+Route::view('edit/{id}', 'update-contact')->middleware('tokenValid');
 Route::get('edit/{id}', [AddContact::class, 'edit']);
 Route::post("update/{id}", [AddContact::class, 'update']);
 Route::get("delete/{id}", [AddContact::class, 'delete']);
