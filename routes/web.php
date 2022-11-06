@@ -32,16 +32,16 @@ Route::post("user", [UserAuth::class, 'userLogin']);
 
 // Dashboard
 Route::view("dashboard", "dashboard")->middleware('tokenValid');
-Route::get("dashboard", [DashboardController::class, 'showData'])->middleware('tokenValid');
+Route::get("dashboard", [DashboardController::class, 'showData']);
 
-
+;
 // Add contacts page
-Route::view("contacts", "add-contacts")->middleware('tokenValid');
+Route::view("contacts", "add-contacts");
 Route::post("contacts", [AddContact::class, 'addData']);
 Route::get("contacts", [AddContact::class, 'showData']);
 
 // Get specific contact
-Route::view('contacts/edit/{id}', 'update-contact')->middleware('tokenValid');
+Route::view('contacts/edit/{id}', 'update-contact');
 Route::get('contacts/edit/{id}', [AddContact::class, 'edit']);
 Route::post("contacts/update/{id}", [AddContact::class, 'update']);
 Route::get("contacts/delete/{id}", [AddContact::class, 'delete']);
@@ -64,17 +64,26 @@ Route::get('/logout', function () {
 
 
 // Create group route
-Route::view("groups", "groups")->middleware('tokenValid');
+Route::view("groups", "groups");
 Route::post("groups", [GroupsController::class, 'addGroup']);
 Route::get("groups", [GroupsController::class, 'showData']);
 // Delete Specific Group
 Route::get("groups/delete/{id}", [GroupsController::class, 'delete']);
 // Get specific Group
-Route::view('groups/edit/{id}', 'update-contact')->middleware('tokenValid');
+Route::view('groups/edit/{id}', 'update-contact');
 Route::get('groups/edit/{id}', [GroupsController::class, 'edit']);
 Route::post("groups/update/{id}", [GroupsController::class, 'update']);
 
 // Quick Message
-Route::view("quick-message", "quick-message")->middleware('tokenValid');
+Route::view("quick-message", "quick-message");
 Route::get("quick-message", [QuickMessageController::class, 'showData']);
 Route::post("quick-message/send", [QuickMessageController::class, 'sendMessage']);
+
+
+// add middleware to all routes
+Route::middleware(['tokenValid'])->group(function () {
+    Route::get('dashboard', [DashboardController::class, 'showData']);
+    Route::get('contacts', [AddContact::class, 'showData']);
+    Route::get('groups', [GroupsController::class, 'showData']);
+    Route::get('quick-message', [QuickMessageController::class, 'showData']);
+});

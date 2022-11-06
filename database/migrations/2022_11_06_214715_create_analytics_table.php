@@ -13,14 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sms_users', function (Blueprint $table) {
+        Schema::create('analytics', function (Blueprint $table) {
             $table->id();
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('email');
-            $table->string('country');
-            $table->string('password');
-            $table->string('phone_number')->unique();
+            $table->timestamps();
+            $table->string("user_name");
+            $table->integer("number_of_messages_sent");
         });
     }
 
@@ -31,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sms_users');
+        Schema::dropIfExists('analytics');
     }
 };

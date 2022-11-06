@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\sms_user_contact;
 use App\Models\sms_group;
+use App\Models\analytic;
 
 class QuickMessageController extends Controller
 {
@@ -43,6 +44,9 @@ class QuickMessageController extends Controller
         // $result = curl_exec($ch);
         // $result = json_decode($result, TRUE);
         // curl_close($ch);
+        
+        // Get Analytics
+        $analytics = analytic::where('user_name', session('user'))->first();
         return back()->with('success', 'Message sent successfully');
     }
 }
