@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Sign_up;
 use App\Http\Controllers\UserAuth;
 use App\Http\Controllers\AddContact;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GroupsController;
 
 /*
@@ -29,11 +30,10 @@ Route::post("sign-up", [Sign_up::class, 'addData']);
 Route::post("user", [UserAuth::class, 'userLogin']);
 
 
-Route::get('/dashboard', function () {
-    //
-    return view('dashboard');
-})->middleware('tokenValid');
-// Route::view("dashboard", "dashboard");
+// Dashboard
+Route::view("dashboard", "dashboard")->middleware('tokenValid');
+Route::get("dashboard", [DashboardController::class, 'showData'])->middleware('tokenValid');
+
 
 // Add contacts page
 Route::view("contacts", "add-contacts")->middleware('tokenValid');
