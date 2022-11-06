@@ -29,7 +29,7 @@
                     <div class="right-side"> 
                         <div class="analytics-container">
                         <div class="analytics-item">
-                            <h3>Messages Sent</h3>
+                            <h3>Messages Sent  </h3>
                             <p>0</p>
                         </div>
                         <div class="analytics-item">
