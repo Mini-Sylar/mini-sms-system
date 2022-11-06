@@ -5,7 +5,7 @@ confirmChoiceContact.addEventListener("click", () => {
     allChecked.forEach((element) => {
         if (element.checked) {
             //    add element value to contact field
-            constactField.value += `${element.value}, `;
+            constactField.value += `${element.value},`;
         }
     });
 });
@@ -16,7 +16,7 @@ confirmChoice.addEventListener("click", () => {
     allCheckedGroup.forEach((element) => {
         if (element.checked) {
             //    add element value to contact field
-            constactField.value += `${element.value}, `;
+            constactField.value += `${element.value},`;
         }
     });
 });

@@ -28,7 +28,7 @@
                 {{-- Input message Section --}}
                 {{-- Add components here --}}
 
-                <form action="#">
+                <form action="/quick-message/send" method="POST">
                     @csrf
                     <div class="message-body">
                         {{-- Create a textarea --}}
