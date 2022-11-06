@@ -44,7 +44,7 @@ Route::get("contacts", [AddContact::class, 'showData']);
 Route::view('edit/{id}', 'update-contact')->middleware('tokenValid');
 Route::get('edit/{id}', [AddContact::class, 'edit']);
 Route::post("update/{id}", [AddContact::class, 'update']);
-Route::get("delete/{id}", [AddContact::class, 'delete']);
+Route::get("contacts/delete/{id}", [AddContact::class, 'delete']);
 
 // login
 Route::get('/login', function () {
@@ -67,4 +67,4 @@ Route::get('/logout', function () {
 Route::view("groups", "groups")->middleware('tokenValid');
 Route::post("groups", [GroupsController::class, 'addGroup']);
 Route::get("groups", [GroupsController::class, 'showData']);
-// Route::get("groups/delete/{id}", [GroupsController::class, 'delete']);
+Route::get("groups/delete/{id}", [GroupsController::class, 'delete']);
