@@ -40,7 +40,7 @@
                                     labels: ['Number of Contacts', 'Number of Groups', 'Messages Sent'],
                                     datasets: [{
                                         label: 'Genders',
-                                        data: [{{ $contact_list }}, {{ $group_list }}, 3],
+                                        data: [{{ $contact_list }}, {{ $group_list }}, {{ $number_messages }}],
                                         backgroundColor: [
                                             'rgba(255, 99, 132, 1)',
                                             'rgba(54, 162, 235, 1)',
@@ -76,7 +76,7 @@
                     <div class="analytics-container">
                         <div class="analytics-item">
                             <h3>Messages Sent </h3>
-                            <p>0</p>
+                            <p>{{ $number_messages }}</p>
                         </div>
                         <div class="analytics-item">
                             <h3>Number of Contacts</h3>
