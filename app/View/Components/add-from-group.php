@@ -11,9 +11,11 @@ class AddFromGroup extends Component
      *
      * @return void
      */
-    public function __construct()
+    public $groups;
+    public function __construct($groups)
     {
         //
+        $this->groups = $groups;
     }
 
     /**

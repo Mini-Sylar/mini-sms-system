@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <x-AddFromGroup />
+    <x-AddFromGroup :groups="$groups" />
     <x-AddFromContacts :contacts="$contacts" />
     <x-dashboard-header />
     <x-dashboard-sidebar />

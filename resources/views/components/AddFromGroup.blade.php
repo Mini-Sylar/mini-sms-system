@@ -8,14 +8,14 @@
                     <th>Group Name</th>
                     <th>Contacts</th>
                 </tr>
-                <tr>
-                    <td>
-                        <input type="checkbox" name="group-name-here" class="messageCheckboxGroup"
-                            value="Group Example Here">
-                        Group 1
-                    </td>
-                    <td>08012345678</td>
-                </tr>
+                @foreach ($groups as $group)
+                    <tr>
+                        <td> <input type="checkbox" name="contact-name-here" class="messageCheckboxGroup"
+                                value="{{ $group['contact_number'] }}"> {{ $group['group_name'] }}
+                        </td>
+                        <td>{{ $group['contact_number'] }}</td>
+                    </tr>
+                @endforeach
             </table>
         </div>
         <button type="button" class="confirm-choice">Confirm Choices</button>
