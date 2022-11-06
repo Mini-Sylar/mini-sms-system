@@ -41,9 +41,9 @@ Route::post("contacts", [AddContact::class, 'addData']);
 Route::get("contacts", [AddContact::class, 'showData']);
 
 // Get specific contact
-Route::view('edit/{id}', 'update-contact')->middleware('tokenValid');
-Route::get('edit/{id}', [AddContact::class, 'edit']);
-Route::post("update/{id}", [AddContact::class, 'update']);
+Route::view('contacts/edit/{id}', 'update-contact')->middleware('tokenValid');
+Route::get('contacts/edit/{id}', [AddContact::class, 'edit']);
+Route::post("contacts/update/{id}", [AddContact::class, 'update']);
 Route::get("contacts/delete/{id}", [AddContact::class, 'delete']);
 
 // login
@@ -67,7 +67,9 @@ Route::get('/logout', function () {
 Route::view("groups", "groups")->middleware('tokenValid');
 Route::post("groups", [GroupsController::class, 'addGroup']);
 Route::get("groups", [GroupsController::class, 'showData']);
+// Delete Specific Group
 Route::get("groups/delete/{id}", [GroupsController::class, 'delete']);
-// Get specific contact
+// Get specific Group
 Route::view('groups/edit/{id}', 'update-contact')->middleware('tokenValid');
 Route::get('groups/edit/{id}', [GroupsController::class, 'edit']);
+Route::post("groups/update/{id}", [GroupsController::class, 'update']);

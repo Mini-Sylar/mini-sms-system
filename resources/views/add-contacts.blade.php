@@ -37,7 +37,7 @@
                     <td>{{$contact['full_name']}}</td>
                     <td>{{$contact['contact_number']}}</td>
                     <td class="actions">
-                        <a href="edit/{{$contact['id']}}" class="show-update">Update</a>
+                        <a href="contacts/edit/{{$contact['id']}}" class="show-update">Update</a>
                         <a href="contacts/delete/{{$contact['id']}}">Delete</a>
                     </td>
                 </tr>

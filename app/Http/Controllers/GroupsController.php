@@ -35,4 +35,12 @@ class GroupsController extends Controller
         $data = sms_group::find($id);
         return view('update-group', ['member' => $data]);
     }
+    function update($id, Request $req)
+    {
+        $group = sms_group::find($id);
+        $group->group_name = $req->input('name');
+        $group->contact_number = $req->input('phone');
+        $group->save();
+        return redirect('groups')->with('success', 'Contact updated successfully!');
+    }
 }

@@ -42,7 +42,6 @@ class AddContact extends Controller
 
     function update($id, Request $req)
     {
-        $data =  sms_user_contact::where('created_by', session('user'))->get();
         $contact = sms_user_contact::find($id);
         $contact->full_name = $req->input('name');
         $contact->contact_number = $req->input('phone');
