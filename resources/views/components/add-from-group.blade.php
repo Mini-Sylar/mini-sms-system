@@ -15,30 +15,6 @@
                     </td>
                     <td>08012345678</td>
                 </tr>
-                <tr>
-                    <td> <input type="checkbox" name="group-name-here"> Group 1</td>
-                    <td>08012345678</td>
-                </tr>
-                <tr>
-                    <td> <input type="checkbox" name="group-name-here"> Group 1</td>
-                    <td>08012345678</td>
-                </tr>
-                <tr>
-                    <td> <input type="checkbox" name="group-name-here"> Group 1</td>
-                    <td>08012345678</td>
-                </tr>
-                <tr>
-                    <td> <input type="checkbox" name="group-name-here"> Group 1</td>
-                    <td>08012345678</td>
-                </tr>
-                <tr>
-                    <td> <input type="checkbox" name="group-name-here"> Group 1</td>
-                    <td>08012345678</td>
-                </tr>
-                <tr>
-                    <td> <input type="checkbox" name="group-name-here"> Group 1</td>
-                    <td>08012345678</td>
-                </tr>
             </table>
         </div>
         <button type="button" class="confirm-choice">Confirm Choices</button>

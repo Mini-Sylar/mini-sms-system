@@ -44,7 +44,7 @@
                             <h3>
                                 <label for="contacts">Contacts</label>
                             </h3>
-                            <textarea name="contacts" id="contacts" cols="30" rows="10" placeholder="Type your contacts here"></textarea>
+                            <textarea name="contacts" id="contacts" cols="30" rows="10" placeholder="Type your contacts here" class="contacts-field"></textarea>
                         </div>
                     </div>
                     <div class="message-footer">
@@ -89,6 +89,7 @@
             addFromContactAside.classList.remove('active');
         });
     </script>
+    <script src="{{ asset('js/add-to-contact-field.js') }}"></script>
 </body>
 
 </html>

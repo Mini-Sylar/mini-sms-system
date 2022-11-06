@@ -9,38 +9,19 @@
                     <th>Phone Number</th>
                 </tr>
                 <tr>
-                    <td>
-                        <input type="checkbox" name="group-name-here">
-                        Name 1
+                    <td> <input type="checkbox" name="contact-name-here" class="messageCheckboxContact" checked
+                            value="Contact-Name-Here"> Name 1
                     </td>
                     <td>08012345678</td>
                 </tr>
                 <tr>
-                    <td> <input type="checkbox" name="group-name-here"> Name 2</td>
-                    <td>08012345678</td>
-                </tr>
-                <tr>
-                    <td> <input type="checkbox" name="group-name-here"> Name 1</td>
-                    <td>08012345678</td>
-                </tr>
-                <tr>
-                    <td> <input type="checkbox" name="group-name-here"> Name 1</td>
-                    <td>08012345678</td>
-                </tr>
-                <tr>
-                    <td> <input type="checkbox" name="group-name-here"> Name 1</td>
-                    <td>08012345678</td>
-                </tr>
-                <tr>
-                    <td> <input type="checkbox" name="group-name-here"> Name 1</td>
-                    <td>08012345678</td>
-                </tr>
-                <tr>
-                    <td> <input type="checkbox" name="group-name-here"> Group 1</td>
+                    <td> <input type="checkbox" name="contact-name-here" class="messageCheckboxContact" checked
+                            value="Contact-Name-Here2"> Name 2
+                    </td>
                     <td>08012345678</td>
                 </tr>
             </table>
         </div>
-        <button type="button" class="confirm-choice">Confirm Choices</button>
+        <button type="button" class="confirm-choice confirm-choice-contact">Confirm Choices</button>
     </div>
 </aside>
