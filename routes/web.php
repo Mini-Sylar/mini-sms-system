@@ -6,7 +6,7 @@ use App\Http\Controllers\UserAuth;
 use App\Http\Controllers\AddContact;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GroupsController;
-
+use App\Http\Controllers\QuickMessageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -76,3 +76,4 @@ Route::post("groups/update/{id}", [GroupsController::class, 'update']);
 
 // Quick Message
 Route::view("quick-message", "quick-message")->middleware('tokenValid');
+Route::get("quick-message", [QuickMessageController::class, 'showData']);

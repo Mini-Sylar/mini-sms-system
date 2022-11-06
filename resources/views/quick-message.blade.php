@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <x-add-from-group />
-    <x-add-from-contacts />
+    <x-AddFromGroup />
+    <x-AddFromContacts :contacts="$contacts" />
     <x-dashboard-header />
     <x-dashboard-sidebar />
     <main>
@@ -22,7 +22,7 @@
             <div class="quick-message-container">
                 <h2>Send A Message</h2>
                 <div class="quick-actions">
-                    <a href="#" class="add-from-contact">Add Exisiting Contact</a>
+                    <a href="#" class="add-from-contact">Add Existing Contact</a>
                     <a href="#" class="add-from-group">Add Contacts From Group</a>
                 </div>
                 {{-- Input message Section --}}
@@ -44,7 +44,8 @@
                             <h3>
                                 <label for="contacts">Contacts</label>
                             </h3>
-                            <textarea name="contacts" id="contacts" cols="30" rows="10" placeholder="Type your contacts here" class="contacts-field"></textarea>
+                            <textarea name="contacts" id="contacts" cols="30" rows="10" placeholder="Type your contacts here"
+                                class="contacts-field"></textarea>
                         </div>
                     </div>
                     <div class="message-footer">

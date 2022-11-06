@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class add-from-group extends Component
+class AddFromGroup extends Component
 {
     /**
      * Create a new component instance.
