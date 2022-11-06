@@ -45,11 +45,8 @@ class QuickMessageController extends Controller
         // $result = json_decode($result, TRUE);
         // curl_close($ch);
 
-        // Get Analytics
-
+        // Update Analytics
         $analytics = analytic::where('user_name', session('user'))->first()->increment('number_of_messages_sent');
-        // $analytics->save();
-        // $analytics->number_of_messages_sent = $analytics->number_of_messages_sent + 1;
         return back()->with('success', 'Message sent successfully');
     }
 }
