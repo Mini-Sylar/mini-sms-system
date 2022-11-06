@@ -17,7 +17,7 @@ class UserAuth extends Controller
             $req->session()->put('user', $data['phone-number']);
             return redirect('dashboard');
         } else {
-            return redirect('login')->with('fail', 'Invalid phone number or password');
+            return redirect('login')->with('error', 'Invalid phone number or password');
         }
         // $req->session()->put('user', $data['phone-number']);
 

@@ -37,7 +37,6 @@ Route::get('/dashboard', function () {
 
 // Add contacts page
 Route::view("contacts", "add-contacts")->middleware('tokenValid');
-
 Route::post("contacts", [AddContact::class, 'addData']);
 Route::get("contacts", [AddContact::class, 'showData']);
 

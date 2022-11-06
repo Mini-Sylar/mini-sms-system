@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="{{asset('css/groups.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/groups.css') }}" rel="stylesheet">
     <title>Groups</title>
 </head>
+
 <body>
-      <x-dashboard-header/>
-    <x-dashboard-sidebar/>
+    <x-dashboard-header />
+    <x-dashboard-sidebar />
     <main>
         <section>
-            <x-new-group/>
+            <x-new-group />
             <div class="main-container">
                 <h2>Groups</h2>
                 <div class="table-container">
@@ -23,14 +25,14 @@
                             <th>Actions</th>
                         </tr>
                         @foreach ($groups as $group)
-                        <tr>
-                            <td>{{$group['group_name']}}</td>
-                            <td>  {{substr_count($group['contact_number'], ",")+1}}</td>
-                            <td class="actions">
-                                <a href="edit/{{$group['id']}}" class="show-update">Update</a>
-                                <a href="delete/{{$group['id']}}">Delete</a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>{{ $group['group_name'] }}</td>
+                                <td> {{ substr_count($group['contact_number'], ',') + 1 }}</td>
+                                <td class="actions">
+                                    <a href="edit/{{ $group['id'] }}" class="show-update">Update</a>
+                                    <a href="delete/{{ $group['id'] }}">Delete</a>
+                                </td>
+                            </tr>
                         @endforeach
                     </table>
                 </div>
@@ -40,8 +42,7 @@
             </div>
         </section>
     </main>
-    <script src="{{asset('js/show-add-contact.js')}}">
-                
-            </script>
+    <script src="{{ asset('js/show-add-contact.js') }}"></script>
 </body>
+
 </html>
