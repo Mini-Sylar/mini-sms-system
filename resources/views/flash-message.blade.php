@@ -9,7 +9,7 @@
 @if ($message = Session::get('error'))
     <div class="alert alert-danger alert-block"
         style="display: flex; justify-content:center;align-items:center; gap:1rem; color:red">
-        <x-tabler-alert-circle style="color: #555" />
+        <x-tabler-alert-circle />
         <strong style="color:red">
             {{ $message }}
         </strong>
