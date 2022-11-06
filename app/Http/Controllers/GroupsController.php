@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\sms_group;
-use App\Models\sms_user_contact;
 
 class GroupsController extends Controller
 {
@@ -30,5 +29,10 @@ class GroupsController extends Controller
         $data = sms_group::find($id);
         $data->delete();
         return back()->with('success', 'Group deleted successfully!');
+    }
+    function edit($id)
+    {
+        $data = sms_group::find($id);
+        return view('update-group', ['member' => $data]);
     }
 }

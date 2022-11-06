@@ -17,6 +17,10 @@
             <x-new-group />
             <div class="main-container">
                 <h2>Groups</h2>
+                <div id="app2" class="flash-deleted">
+                    @include('flash-message')
+                    @yield('content')
+                </div>
                 <div class="table-container">
                     <table class="table">
                         <tr>
@@ -29,7 +33,7 @@
                                 <td>{{ $group['group_name'] }}</td>
                                 <td> {{ substr_count($group['contact_number'], ',') + 1 }}</td>
                                 <td class="actions">
-                                    <a href="#" class="show-update">Update</a>
+                                    <a href="groups/edit/{{ $group['id'] }}" class="show-update">Update</a>
                                     <a href="groups/delete/{{ $group['id'] }}">Delete</a>
                                 </td>
                             </tr>

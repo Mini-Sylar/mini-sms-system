@@ -14,7 +14,7 @@
         @csrf
         <label for="name">Group Name</label>
         <input type="text" name="name" id="name" value="" required>
-        <label for="phone">Numbers</label>
+        <label for="phone">Group Contacts</label>
         <input type="text" name="phone" id="phone" value="" placeholder="Add numbers seperated by commas" required>
         <button type="submit" class="add-contact-button">Create New Group</button>
     </form>

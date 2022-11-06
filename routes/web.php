@@ -68,3 +68,6 @@ Route::view("groups", "groups")->middleware('tokenValid');
 Route::post("groups", [GroupsController::class, 'addGroup']);
 Route::get("groups", [GroupsController::class, 'showData']);
 Route::get("groups/delete/{id}", [GroupsController::class, 'delete']);
+// Get specific contact
+Route::view('groups/edit/{id}', 'update-contact')->middleware('tokenValid');
+Route::get('groups/edit/{id}', [GroupsController::class, 'edit']);

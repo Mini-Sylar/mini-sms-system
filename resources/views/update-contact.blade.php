@@ -4,8 +4,6 @@
     <h2>New Contact</h2>
      <div id="app" class="flash-message"> 
         @include('flash-message')
-
-
         @yield('content')
         <button type="button" class="close-view close-view-update">Close View</button>
         <form method="POST" action="/update/{{$member['id']}}">
