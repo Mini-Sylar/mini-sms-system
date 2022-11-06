@@ -9,12 +9,12 @@
             <x-tabler-home class="dash-icon" />
         </a>
         {{-- Quick Message --}}
-        <a href="#">
+        <a href="/quick-message">
             <x-tabler-message-circle class="dash-icon" />
         </a>
         {{-- Contact Section --}}
         <a href="/contacts">
-            <x-tabler-address-book  />
+            <x-tabler-address-book />
         </a>
         {{-- Group Section --}}
         <a href="/groups">

@@ -73,3 +73,6 @@ Route::get("groups/delete/{id}", [GroupsController::class, 'delete']);
 Route::view('groups/edit/{id}', 'update-contact')->middleware('tokenValid');
 Route::get('groups/edit/{id}', [GroupsController::class, 'edit']);
 Route::post("groups/update/{id}", [GroupsController::class, 'update']);
+
+// Quick Message
+Route::view("quick-message", "quick-message")->middleware('tokenValid');

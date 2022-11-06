@@ -20,7 +20,7 @@
             <div class="quick-actions-container">
                 <h2>Quick Actions</h2>
                 <div class="quick-actions">
-                    <a href="#">Quick Message</a>
+                    <a href="quick-message">Quick Message</a>
                     <a href="/contacts">Contacts</a>
                     <a href="/groups">Groups</a>
                 </div>
