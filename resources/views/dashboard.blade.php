@@ -22,7 +22,7 @@
                 <div class="quick-actions">
                     <a href="#">Quick Message</a>
                     <a href="/contacts">Contacts</a>
-                    <a href="#">Groups</a>
+                    <a href="/groups">Groups</a>
                 </div>
             </div>
             {{-- Analytics --}}
@@ -37,17 +37,19 @@
                             const Genders = new Chart(getgender, {
                                 type: 'doughnut',
                                 data: {
-                                    labels: ['Number of Contacts', 'Number of Groups'],
+                                    labels: ['Number of Contacts', 'Number of Groups', 'Messages Sent'],
                                     datasets: [{
                                         label: 'Genders',
-                                        data: [{{ $contact_list }}, {{ $group_list }}],
+                                        data: [{{ $contact_list }}, {{ $group_list }}, 3],
                                         backgroundColor: [
                                             'rgba(255, 99, 132, 1)',
                                             'rgba(54, 162, 235, 1)',
+                                            "rgb(255, 142, 0)"
                                         ],
                                         borderColor: [
                                             'rgba(255, 99, 132, 1)',
                                             'rgba(54, 162, 235, 1)',
+                                            'rgb(255, 142, 0)'
                                         ],
                                         borderWidth: 1
                                     }]
