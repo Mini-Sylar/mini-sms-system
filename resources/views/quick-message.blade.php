@@ -20,6 +20,10 @@
     <main>
         <section>
             <div class="quick-message-container">
+                <div id="app2" class="flash-deleted">
+                    @include('flash-message')
+                    @yield('content')
+                </div>
                 <h2>Send A Message</h2>
                 <div class="quick-actions">
                     <a href="#" class="add-from-contact">Add Existing Contact</a>
