@@ -49,7 +49,7 @@ class QuickMessageController extends Controller
         curl_close($ch);
         Log::info($result);
         // // Update Analytics
-        // $analytics = analytic::where('user_name', session('user'))->first()->increment('number_of_messages_sent');
+        $analytics = analytic::where('user_name', session('user'))->first()->increment('number_of_messages_sent');
         return back()->with('success', 'Message sent successfully');
     }
 }
