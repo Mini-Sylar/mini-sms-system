@@ -34,15 +34,11 @@ class ResetPassWordController extends Controller
 
     function resetPassword($phone_number)
     {
-        // return back with flash message
-        // dd($phone_number);
         return view('change-password', ['phone_number' => $phone_number]);
-        // return back()->with('success', 'Password reset successfully!');
     }
 
     function updatePassword(Request $req)
     {
-        // dd($phone_number);
         if ($req->new_password == $req->confirm_password) {      // meaning passwords are the same 
             $phone_number = $req->user_number; //Assume some phone number exists
             $user = SMS_User::where('phone_number', $phone_number)->first();
