@@ -32,7 +32,7 @@ textarea {
 
 /* Style the submit button with a specific background color etc */
 input[type="submit"] {
-    background-color: var(--main-accent-color);
+    background-color: #ff8e00;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -81,4 +81,13 @@ input[type="submit"]:hover {
 
 .show-reset {
     visibility: visible;
+}
+
+.update-aside {
+    visibility: visible;
+    position: static;
+}
+
+.update-submit {
+    background-color: #ff8e00;
 }

@@ -80,14 +80,14 @@ Route::view("quick-message", "quick-message");
 Route::get("quick-message", [QuickMessageController::class, 'showData']);
 Route::post("quick-message/send", [QuickMessageController::class, 'sendMessage']);
 
-
-// Reset 
-Route::view("password/reset/", "change-password");
-// Route::post("change-password", [ResetPassWordController::class, 'resetPassword']);
 // Email View When Sent
 Route::view('email-template', 'email-template');
+
 // Update Password
-// Route::view('password/reset/', 'update-password');
+Route::view("password/reset/{phone_number}", "change-password");
+
+Route::get("password/reset/{phone_number}", ['uses' => '\App\Http\Controllers\ResetPassWordController@resetPassword']);
+Route::post("password/reset/update", [ResetPassWordController::class, 'updatePassword']);
 // add middleware to all routes
 Route::middleware(['tokenValid'])->group(function () {
     Route::get('dashboard', [DashboardController::class, 'showData']);
