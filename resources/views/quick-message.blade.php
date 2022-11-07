@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"
         integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Quick Message</title>
+    <title>SMS-Mini | Quick Message</title>
 </head>
 
 <body>
@@ -20,11 +20,12 @@
     <main>
         <section>
             <div class="quick-message-container">
+
+                <h2>Send A Message</h2>
                 <div id="app2" class="flash-deleted">
                     @include('flash-message')
                     @yield('content')
                 </div>
-                <h2>Send A Message</h2>
                 <div class="quick-actions">
                     <a href="#" class="add-from-contact">Add Existing Contact</a>
                     <a href="#" class="add-from-group">Add Contacts From Group</a>

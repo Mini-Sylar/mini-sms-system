@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="{{asset('css/contacts.css')}}" rel="stylesheet">
        
-    <title>Contacts | {{session('user')}}</title>
+    <title>SMS-Mini | Contacts</title>
 </head>
 <body>
     <x-dashboard-header/>

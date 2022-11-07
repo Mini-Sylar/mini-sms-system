@@ -1,7 +1,7 @@
   <link href="{{asset('css/new-contact.css')}}" rel="stylesheet">
 
 <aside class="update-contact-aside">
-    <h2>New Contact</h2>
+    <h2>Update Contact</h2>
      <div id="app" class="flash-message"> 
         @include('flash-message')
         @yield('content')

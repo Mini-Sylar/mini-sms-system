@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ asset('css/sign-up.css') }}" rel="stylesheet">
 
-    <title>Login</title>
+    <title>SMS-Mini | Login</title>
 </head>
 
 <body>

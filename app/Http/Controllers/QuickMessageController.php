@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\sms_user_contact;
 use App\Models\sms_group;
 use App\Models\analytic;
+use Illuminate\Support\Facades\Log;
+use Termwind\Components\Dd;
 
 class QuickMessageController extends Controller
 {
@@ -23,6 +25,7 @@ class QuickMessageController extends Controller
         $contacts = rtrim($req->contacts, ',');
         $contacts = explode(',', $contacts);
         $message  = $req->message;
+        // Log::info($contacts);
         // remove last value in contacts array
         $url = env('MNOTIFY_QUICK_SMS') . '?key=' . env('MNOTIFY_API_KEY');
         $data = [
@@ -33,20 +36,20 @@ class QuickMessageController extends Controller
             'schedule_date' => ''
         ];
         // Send Message Here
-        // $ch = curl_init();
-        // $headers = array();
-        // $headers[] = "Content-Type: application/json";
-        // curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        // curl_setopt($ch, CURLOPT_URL, $url);
-        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        // curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-        // curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-        // $result = curl_exec($ch);
-        // $result = json_decode($result, TRUE);
-        // curl_close($ch);
-
-        // Update Analytics
-        $analytics = analytic::where('user_name', session('user'))->first()->increment('number_of_messages_sent');
+        $ch = curl_init();
+        $headers = array();
+        $headers[] = "Content-Type: application/json";
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+        $result = curl_exec($ch);
+        $result = json_decode($result, TRUE);
+        curl_close($ch);
+        Log::info($result);
+        // // Update Analytics
+        // $analytics = analytic::where('user_name', session('user'))->first()->increment('number_of_messages_sent');
         return back()->with('success', 'Message sent successfully');
     }
 }
