@@ -18,11 +18,12 @@ class Sign_up extends Controller
         $user->email = $req->email;
         $user->country = $req->country;
         $user->password = $req->password;
+        
         $user->phone_number = $req->input('phone-number');
 
         $analytics->user_name = $req->input('phone-number');
         $analytics->number_of_messages_sent = 0;
-
+        
         $user->save();
         $analytics->save();
         return redirect('login');
