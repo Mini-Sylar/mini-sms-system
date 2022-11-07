@@ -71,8 +71,14 @@ input[type="submit"]:hover {
     padding: 3rem;
     border: 2px solid black;
     border-radius: 20px;
+    z-index: 5;
+    visibility: collapse;
 }
 
 .reset > * {
     margin-block: 1rem;
+}
+
+.show-reset {
+    visibility: visible;
 }

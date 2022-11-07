@@ -7,6 +7,8 @@ use App\Http\Controllers\AddContact;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GroupsController;
 use App\Http\Controllers\QuickMessageController;
+use App\Http\Controllers\ResetPassWordController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,9 +34,7 @@ Route::post("user", [UserAuth::class, 'userLogin']);
 
 // Dashboard
 Route::view("dashboard", "dashboard")->middleware('tokenValid');
-Route::get("dashboard", [DashboardController::class, 'showData']);
-
-;
+Route::get("dashboard", [DashboardController::class, 'showData']);;
 // Add contacts page
 Route::view("contacts", "add-contacts");
 Route::post("contacts", [AddContact::class, 'addData']);
@@ -53,6 +53,7 @@ Route::get('/login', function () {
     }
     return view('login');
 });
+Route::post('/reset-password', [ResetPassWordController::class, 'sendResetEmail']);
 
 // Logout
 Route::get('/logout', function () {
@@ -80,6 +81,13 @@ Route::get("quick-message", [QuickMessageController::class, 'showData']);
 Route::post("quick-message/send", [QuickMessageController::class, 'sendMessage']);
 
 
+// Reset 
+Route::view("password/reset/", "change-password");
+// Route::post("change-password", [ResetPassWordController::class, 'resetPassword']);
+// Email View When Sent
+Route::view('email-template', 'email-template');
+// Update Password
+// Route::view('password/reset/', 'update-password');
 // add middleware to all routes
 Route::middleware(['tokenValid'])->group(function () {
     Route::get('dashboard', [DashboardController::class, 'showData']);

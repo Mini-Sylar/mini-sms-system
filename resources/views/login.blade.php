@@ -15,13 +15,11 @@
     <main>
         <section>
             <div class="sign-up-container">
-                
+
                 <div class="sign-up">
                     <div id="app" class="flash-message"
-                        style="display: flex;justify-content:center;align-items:center;">
+                        style="display: flex;justify-content:center;align-items:center; width:100% background-color:red;">
                         @include('flash-message')
-
-
                         @yield('content')
                     </div>
                     {{-- create a form which takes phone number and password --}}
@@ -39,12 +37,25 @@
                         {{-- Create submit button --}}
                         <input type="submit" value="Login">
                     </form>
-                    <a href="#">forgot password?</a>
+                    <a href="#" class="forgot-password">forgot password?</a>
                 </div>
             </div>
-            <x-reset-password/>
+            <x-reset-password />
         </section>
     </main>
+    <script>
+        const resetPassword = document.querySelector('.reset-pass-aside');
+        const forgotPassword = document.querySelector('.forgot-password');
+        const closeViewReset = document.querySelector('.close-view-reset');
+
+        forgotPassword.addEventListener('click', () => {
+            resetPassword.classList.add('show-reset');
+        });
+
+        closeViewReset.addEventListener("click", () => {
+            resetPassword.classList.remove('show-reset');
+        });
+    </script>
 </body>
 
 </html>
