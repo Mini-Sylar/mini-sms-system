@@ -2,6 +2,7 @@
     width: min(90%, 1200px);
     margin: 0 auto;
     padding: 1rem;
+    position: relative;
 }
 .sign-up {
     display: flex;
@@ -55,4 +56,23 @@ input[type="submit"]:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Reset Form Here */
+.reset-pass-aside {
+    position: absolute;
+    width: 30%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 20%;
+    background-color: white;
+    box-shadow: 100vmin 0 0 100vw rgba(0, 0, 0, 0.804);
+    padding: 3rem;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.reset > * {
+    margin-block: 1rem;
 }

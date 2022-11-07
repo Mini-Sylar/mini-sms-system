@@ -15,7 +15,7 @@
     <main>
         <section>
             <div class="sign-up-container">
-
+                
                 <div class="sign-up">
                     <div id="app" class="flash-message"
                         style="display: flex;justify-content:center;align-items:center;">
@@ -42,6 +42,7 @@
                     <a href="#">forgot password?</a>
                 </div>
             </div>
+            <x-reset-password/>
         </section>
     </main>
 </body>
