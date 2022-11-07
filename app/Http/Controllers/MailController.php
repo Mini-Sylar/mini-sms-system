@@ -12,8 +12,8 @@ class MailController extends Controller
     public function sendMail()
     {
         $mailData = [
-            'title' => 'Mail from ItSolutionStuff.com',
-            'body' => 'This is for testing email using smtp.'
+            'title' => 'Mail from Mini-SMS',
+            'body' => 'ResetBody'
         ];
 
         Mail::to('terenceugoq@gmail.com')->send(new resetMail($mailData));

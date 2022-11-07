@@ -39,3 +39,13 @@
         Please check the form below for errors
     </div>
 @endif
+
+    <script>
+        const flash_message = document.querySelectorAll('.alert')
+        // hide flash message after 4 seconds
+        setTimeout(() => {
+            flash_message.forEach((message) => {
+                message.style.visibility = 'hidden'
+            })
+        }, 4000)
+    </script>

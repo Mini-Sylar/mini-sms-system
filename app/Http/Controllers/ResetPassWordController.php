@@ -19,9 +19,9 @@ class ResetPassWordController extends Controller
             $email = $req->input("email");
             $user_name = DB::table('sms_users')->where('email', $email)->value('first_name');
             $token = SMS_User::where('email', $email)->first()->phone_number;
-            $link = "localhost:8000/" . 'password/reset/' . $token . '?email=' . urlencode($email);
+            $link = "http://localhost:8000/" . 'password/reset/' . $token . '?email=' . urlencode($email);
             $mailData = [
-                'title' => 'Mail from ItSolutionStuff.com',
+                'title' => 'Mini-SMS Password Reset',
                 'url' => $link,
                 'user_name' => $user_name,
             ];

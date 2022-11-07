@@ -56,6 +56,13 @@
             resetPassword.classList.remove('show-reset');
         });
     </script>
+    {{-- <script>
+        const flash_message = document.querySelector('.flash-message')
+        // hide flash message after 4 seconds
+        setTimeout(() => {
+            flash_message.style.visibility = 'hidden'
+        }, 4000)
+    </script> --}}
 </body>
 
 </html>
